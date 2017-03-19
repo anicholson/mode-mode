@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  mode-mode:
+    build: .
+    volumes:
+      - .:/usr/local/src/mode-mode
