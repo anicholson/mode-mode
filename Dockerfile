@@ -7,3 +7,7 @@ RUN apt-get update && \
 
 
 ADD . /usr/local/src/mode-mode
+
+WORKDIR /usr/local/src/mode-mode
+
+RUN bundle install
