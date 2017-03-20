@@ -2,6 +2,6 @@ version: '2'
 
 services:
   api:
-    build: ./api
+    build: ./server
     volumes:
-      - ./api:/usr/local/src/mode-mode
+      - ./server:/usr/local/src/mode-mode
