@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  mode-mode:
-    build: .
+  api:
+    build: ./api
     volumes:
-      - .:/usr/local/src/mode-mode
+      - ./api:/usr/local/src/mode-mode
