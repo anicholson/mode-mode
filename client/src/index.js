@@ -2,6 +2,8 @@
 
 require('./index.html');
 
+require('./app.css');
+
 
 var Elm = require('./Main.elm');
 

@@ -15,6 +15,22 @@ const config = {
     module: {
         rules: [
             {
+                test: /\.(css|scss)$/,
+                use: [
+                    'file-loader?name=[name].css',
+                    'extract-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.sass$/,
+                use: [
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
+            {
                 test: /\.html$/,
                 exclude: /node_modules/,
                 loader: 'file-loader?name=[name].[ext]'
