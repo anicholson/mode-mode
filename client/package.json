@@ -9,6 +9,7 @@
   "dependencies": {
     "bulma": "^0.4.0",
     "css-loader": "^0.27.3",
+    "elm-oracle": "^1.1.1",
     "elm-webpack-loader": "^4.3.0",
     "extract-loader": "^0.1.0",
     "file-loader": "^0.10.1",
