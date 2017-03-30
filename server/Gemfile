@@ -5,6 +5,7 @@ gem 'rake'
 
 gem 'rack'
 gem 'rack-test'
+gem 'rack-cors', require: 'rack/cors'
 gem 'roda'
 
 gem 'halogen'
