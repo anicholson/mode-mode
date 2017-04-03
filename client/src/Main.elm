@@ -1,6 +1,6 @@
 module Main exposing (..)
 
-import Html exposing (Html, p, h1, h2, div, section, input, text, program)
+import Html exposing (Html, p, h1, h2, div, li, ul, section, input, text, program)
 import Html.Attributes exposing (class, placeholder)
 import Msgs exposing (Msg)
 import Models exposing (..)
@@ -15,10 +15,15 @@ init =
 
 renderMode : Mode -> Html Msg
 renderMode mode =
-    p [ class "mode" ] [ text mode.name ]
+    li [ class "mode" ] [
+         p [ class "mode" ] [ text mode.name ]
+
+        ]
 
 
+showModes : RemoteData.RemoteData a (List Mode) -> Html Msg
 showModes modes =
+    let listData =
     case modes of
         RemoteData.Success m ->
             if List.isEmpty m then
@@ -34,6 +39,8 @@ showModes modes =
 
         otherwise ->
             [ text "Fetching…" ]
+    in
+        ul [ class "modes" ] listData
 
 
 view : Model -> Html Msg
@@ -46,7 +53,7 @@ view model =
         , section [ class "section" ]
             [ input [ class "input", placeholder "Search for a mode" ] []
             ]
-        , section [ class "section" ] <| showModes model.currentModes
+        , section [ class "section" ] [ showModes model.currentModes ]
         ]
 
 
