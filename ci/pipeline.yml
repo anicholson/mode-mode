@@ -1,5 +1,3 @@
 steps:
-  - command: ci/server.sh
+  - command: docker-compose build && docker-compose run api ci/server.sh
     label: "Server Specs"
-    env:
-      BUILDKITE_DOCKER_COMPOSE_CONTAINER: 'api'
