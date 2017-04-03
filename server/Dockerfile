@@ -5,9 +5,12 @@ MAINTAINER Andy Nicholson <andrew@anicholson.net>
 RUN apt-get update && \
     mkdir -p /usr/local/src/mode-mode
 
+ENV app /usr/local/src/mode-mode
 
-ADD . /usr/local/src/mode-mode
+RUN mkdir -p $app
 
-WORKDIR /usr/local/src/mode-mode
+WORKDIR $app
 
-RUN bundle install
+ENV BUNDLE_PATH /gems
+
+ADD . $app

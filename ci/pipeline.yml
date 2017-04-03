@@ -1,0 +1,5 @@
+steps:
+  - command: ci/server.sh
+    label: "Server Specs"
+    env:
+      BUILDKITE_DOCKER_COMPOSE_CONTAINER=api
