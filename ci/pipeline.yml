@@ -1,3 +1,4 @@
 steps:
-  - command: docker-compose build && docker-compose run api ci/server.sh
+  - command: docker-compose build && docker-compose run api ci/server_cukes.sh
     label: "Server Specs"
+  - command: docker-compose build && docker-compose run api ci/server_specs.sh
