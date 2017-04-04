@@ -4,6 +4,7 @@ end
 
 Given /^the following modes:$/ do |table|
   repo = Application['modes_repository']
+
   table.rows.map do |row|
     repo.create(name: row.first, url: row.last)
   end
@@ -39,7 +40,7 @@ Then(/^I can discover the mode count$/) do
   expect(@hal_response).to have_property "count"
 end
 
-Then(/^there are (\d+) modes$/) do |count|
+Then(/^there are (\d+) modes in the response$/) do |count|
   expect(@hal_response.property('count')).to eq(Integer(count))
 end
 

@@ -1,0 +1,5 @@
+example_id                        | status | run_time        |
+--------------------------------- | ------ | --------------- |
+./spec/mode_loader_spec.rb[1:1:1] | passed | 0.00117 seconds |
+./spec/mode_loader_spec.rb[1:1:2] | passed | 0.04638 seconds |
+spec/examples.txt

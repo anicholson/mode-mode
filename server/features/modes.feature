@@ -11,6 +11,6 @@ When I hit the modes endpoint
 And the response is 200
 And the response is a HAL document
 Then I can discover the mode count
-And there are 2 modes
+And there are 2 modes in the response
 And I can see mode A
 And I can see mode B
