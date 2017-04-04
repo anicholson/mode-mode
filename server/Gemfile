@@ -20,12 +20,14 @@ gem 'inflecto'
 
 group :development, :test do
   gem 'pry'
+  gem 'byebug'
+  gem 'pry-byebug'
 end
 
 group :test do
-  gem 'rspec'
+  gem 'rspec', '> 3', '< 4'
   gem 'rspec-hal'
-  gem 'cucumber'
+  gem 'cucumber', '3.0.0.pre.1'
 
   gem 'rom-factory'
 end
